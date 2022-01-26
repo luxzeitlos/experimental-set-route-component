@@ -1,8 +1,14 @@
 experimental-set-route-component
 ==============================================================================
 
-[Short description of the addon.]
+This is an experimental polyfill for the
+[unmerged `setRouteComponent` RFC 731](https://github.com/emberjs/rfcs/pull/731).
 
+`setRouteComponent` can be imported as follows:
+
+```
+import { setRouteComponent } from 'experimental-set-route-component';
+```
 
 Compatibility
 ------------------------------------------------------------------------------
@@ -23,7 +29,9 @@ ember install experimental-set-route-component
 Usage
 ------------------------------------------------------------------------------
 
-[Longer description of how to use the addon in apps.]
+This probably should be used by other addons experimenting with routable
+components.
+Examples can be found in the Dummy App.
 
 
 Contributing
