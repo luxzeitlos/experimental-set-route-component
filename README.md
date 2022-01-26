@@ -33,6 +33,21 @@ This probably should be used by other addons experimenting with routable
 components.
 Examples can be found in the Dummy App.
 
+This is also compatible with `ember-template-imports` and `.gjs` files.
+So this *will* work:
+
+```
+import Route from '@ember/routing/route';
+import { setRouteComponent } from 'experimental-set-route-component';
+
+const RoutableComponentYeah = <template>
+  Whatever
+</template>
+
+export default class FooRoute extends Route {}
+setRouteComponent(RoutableComponentYeah, FooRoute);
+```
+
 
 Contributing
 ------------------------------------------------------------------------------

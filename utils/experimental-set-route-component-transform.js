@@ -49,13 +49,20 @@ class ExperimentalSetRouteComponentTransform extends Plugin {
       'index',
       ...routeDirTree.filter((x) => x.endsWith('/')).map((x) => `${x}index`),
       ...routeDirTree
-        .filter((x) => x.endsWith('.ts') || x.endsWith('.js'))
-        .map((x) => x.slice(0, -3)),
+        .filter(
+          (x) =>
+            x.endsWith('.ts') ||
+            x.endsWith('.js') ||
+            x.endsWith('.gjs') ||
+            x.endsWith('.gts')
+        )
+        .map((x) => x.substring(0, x.lastIndexOf('.'))),
     ]
       .sort()
       .map((r) => r.split('/'));
 
     for (const route of routes) {
+      console.log('process route', route);
       this.setupRoute(route);
     }
   }
