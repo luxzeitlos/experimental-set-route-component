@@ -5,9 +5,12 @@
   "keywords": [
     "ember-addon"
   ],
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/luxferresum/experimental-set-route-component"
+  },
   "license": "MIT",
-  "author": "",
+  "author": "Lux",
   "directories": {
     "doc": "doc",
     "test": "tests"
