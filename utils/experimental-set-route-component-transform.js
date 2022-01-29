@@ -45,8 +45,6 @@ class ExperimentalSetRouteComponentTransform extends Plugin {
   build() {
     const routeDirTree = walkSync(path.join(this.inputAppPath, 'routes'));
     const routes = [
-      'application',
-      'index',
       ...routeDirTree.filter((x) => x.endsWith('/')).map((x) => `${x}index`),
       ...routeDirTree
         .filter(
@@ -62,7 +60,6 @@ class ExperimentalSetRouteComponentTransform extends Plugin {
       .map((r) => r.split('/'));
 
     for (const route of routes) {
-      console.log('process route', route);
       this.setupRoute(route);
     }
   }
